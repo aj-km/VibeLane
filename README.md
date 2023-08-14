@@ -15,20 +15,25 @@ The website is responsive.
 *DEMO Link: https://www.youtube.com/watch?v=PAS4CAGmIR4&ab_channel=HardikKumarSingh
 
 
-![Home Page]![image](https://github.com/aj-km/VibeLane/assets/89783619/81b2d7b3-372a-4863-8817-fbad6179e3e7) \
+![Home Page](https://github.com/aj-km/VibeLane/assets/112047643/d9554c6e-348d-4575-90ad-a9fce145fa30)
+ \
 
 
-![Register Page](https://user-images.githubusercontent.com/89783619/230702642-46b63df1-014d-46ed-a9c0-669499531c86.jpg) \
+![Register Page](https://github.com/aj-km/VibeLane/assets/112047643/f3803138-36f9-4f4c-bb78-2ee19496e640)
+ \
+![Login Page](https://github.com/aj-km/VibeLane/assets/112047643/6f95174f-fc28-4578-b8b6-b0d11e6b157f)
+\
 
 
-![Login Page](https://user-images.githubusercontent.com/89783619/230702644-756aacbc-5e6f-4300-871d-8a9826a7f1d2.jpg)
+![Product Page](https://github.com/aj-km/VibeLane/assets/112047643/2ca8574d-0203-4fe7-8617-454763c76b05)
+ \
 
 
-![Product Page](https://github.com/aj-km/VibeLane/assets/89783619/fa80bdba-c119-4713-8f9f-9f05f173a9fa) \
+![Cart](https://github.com/aj-km/VibeLane/assets/112047643/be95418e-7c75-4aa0-8b6f-3368e572e2de)
 
+ \
 
-![Cart Page](https://github.com/aj-km/VibeLane/assets/89783619/4f90da51-e205-4895-b4d5-ce57c0609527) \
-
-![Payment Page](https://github.com/aj-km/VibeLane/assets/89783619/521ffd01-8bdd-4050-b464-295c9d888368) \
+![Payment page](https://github.com/aj-km/VibeLane/assets/112047643/b94a0a64-035f-4e4e-8c9d-107051579e31)
+ \
 
 ![Logout Page](https://github.com/aj-km/VibeLane/assets/89783619/b11b281e-efec-4051-a644-9d68dacdb2ba)
