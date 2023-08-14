@@ -1,47 +1,46 @@
 export const sliderItems = [
     {
       id: 1,
-      img: "https://m.media-amazon.com/images/I/61UzpCM-dWL._UL1198_.jpg",
-      // img: "https://m.media-amazon.com/images/I/81s3Bg2AaVL._UL1500_.jpg",
+      // img: "https://m.media-amazon.com/images/I/611VhWmonxL._AC_UL600_FMwebp_QL65_.jpg",
+      img: "https://assets.ajio.com/medias/sys_master/root/20230308/lw96/6408887ff997dde6f4e74b03/-473Wx593H-465879320-black-MODEL.jpg",
+      title: "AUTUMN COLLECTION",
+      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
+      // bg: "F0DDC5",  
+    },
+    {
+      id: 2,
+      img: "/img/1.png",
+      // img: "https://m.media-amazon.com/images/I/91NT-rx-gtL._AC_UL600_FMwebp_QL65_.jpg",
       title: "SUMMER SALE",
       desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
       // bg: "f5fafd",
       bg: "#ffffff",
     },
     {
-      id: 2,
-      img: "https://i.ibb.co/DG69bQ4/2.png",
-      title: "AUTUMN COLLECTION",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      bg: "fcf1ed",
-    },
-    {
       id: 3,
-      img: "https://i.ibb.co/cXFnLLV/3.png",
+      img: "https://assets.ajio.com/medias/sys_master/root/20230119/M4WY/63c929f7aeb269c651eb46de/-473Wx593H-465630244-wine-MODEL.jpg",
       title: "LOUNGEWEAR LOVE",
-      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",
-      // bg: "fbf0f4",
-      // bg: "f5fafd",      
-      bg: "ede0ec",      
+      desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF FOR NEW ARRIVALS.",   
     },
   ];
 
   export const categories = [
     {
       id: 1,
-      img: "https://images.pexels.com/photos/5886041/pexels-photo-5886041.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      // img: "https://assets.ajio.com/medias/sys_master/root/20220513/5arK/627e2306aeb26921af76b77c/-473Wx593H-461725396-maroon-MODEL.jpg",
+      img: "https://assets.ajio.com/medias/sys_master/root/20220706/rxlg/62c48c38f997dd03e2be4403/-473Wx593H-441145784-navy-MODEL.jpg",
       title: "SHIRT STYLE!",
       cat:"women"
     },
     {
       id: 2,
-      img: "https://images.pexels.com/photos/2983464/pexels-photo-2983464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      img: "https://assets.ajio.com/medias/sys_master/root/20220803/cVRq/62ea4e7af997dd03e21d8892/-473Wx593H-462876164-blue-MODEL.jpg",
       title: "LOUNGEWEAR LOVE",
       cat:"coat"
     },
     {
       id: 3,
-      img: "https://images.pexels.com/photos/5480696/pexels-photo-5480696.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+      img: "https://assets.ajio.com/medias/sys_master/root/20220512/LIoe/627cef4daeb26921af6ed51d/-473Wx593H-461956418-blue-MODEL.jpg",
       title: "LIGHT JACKETS",
       cat:"jeans"
     },

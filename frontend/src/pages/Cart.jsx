@@ -8,7 +8,9 @@ import { useSelector } from "react-redux";
 import StripeCheckout from "react-stripe-checkout";
 import { useEffect, useState } from "react";
 import { userRequest } from "../requestMethods";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
+import { addProduct } from "../redux/cartRedux";
+import { useDispatch } from "react-redux";
 
 const KEY = process.env.REACT_APP_STRIPE;
 
@@ -159,10 +161,13 @@ const Button = styled.button`
   font-weight: 600;
 `;
 
+
 const Cart = () => {
   const cart = useSelector((state) =>state.cart);
   const [stripeToken, setStripeToken] = useState(null);
+  const [quantity, setQuantity] = useState(1);
   const history = useHistory();
+  const dispatch = useDispatch();
 
   const onToken = (token) => {
     setStripeToken(token);
@@ -173,7 +178,7 @@ const Cart = () => {
   useEffect(() => {
     const makeRequest = async () => {
       try {
-        const res = await userRequest.post("/checkout/payment", {
+        const res = await userRequest.post("checkout/payment", {
           tokenId: stripeToken.id,
           amount: 500,
         });
@@ -185,19 +190,27 @@ const Cart = () => {
     stripeToken && makeRequest();
   }, [stripeToken, cart.total, history]);
 
-  return (
-    <Container>
+
+    const handleQuantity = (type) => {
+      if (type === "dec") {
+        setQuantity((prevQuantity) => (prevQuantity > 1 ? prevQuantity - 1 : 1));
+      } else {
+        setQuantity((prevQuantity) => prevQuantity + 1);
+      }
+    };
+    return (
+      <Container>
       <Navbar />
       <Announcement />
       <Wrapper>
         <Title>YOUR BAG</Title>
         <Top>
-          <TopButton>CONTINUE SHOPPING</TopButton>
+        <Link to="/" > <TopButton>CONTINUE SHOPPING</TopButton></Link> 
           <TopTexts>
             <TopText>Shopping Bag(2)</TopText>
             <TopText>Your Wishlist (0)</TopText>
           </TopTexts>
-          <TopButton type="filled">CHECKOUT NOW</TopButton>
+          {/* <TopButton type="filled">CHECKOUT NOW</TopButton> */}
         </Top>
         <Bottom>
           <Info>
@@ -220,9 +233,9 @@ const Cart = () => {
               </ProductDetail>
               <PriceDetail>
                 <ProductAmountContainer>
-                  <Add />
-                  <ProductAmount>{product.quantity}</ProductAmount>
-                  <Remove />
+                <Remove onClick={() => handleQuantity("dec")} />
+              <ProductAmount>{product.quantity}</ProductAmount>
+              <Add onClick={() => handleQuantity("inc")} />
                 </ProductAmountContainer>
                 <ProductPrice>₹ {product.price*product.quantity}</ProductPrice>
               </PriceDetail>
@@ -250,8 +263,8 @@ const Cart = () => {
               <SummaryItemPrice>₹ {cart.total}</SummaryItemPrice>
             </SummaryItem>
             <StripeCheckout
-                name="E-Mart"
-                image="https://avatars.githubusercontent.com/u/1486366?v=4"
+                name="VibeLane"
+                image="/img/paylogo.png"
                 billingAddress
                 shippingAddress
                 description={`Your total is ₹ ${cart.total}`}
@@ -259,7 +272,7 @@ const Cart = () => {
                 token={onToken}
                 stripeKey={KEY}
             ></StripeCheckout>
-            <Button>CHECKOUT NOW</Button>
+            {/* <Button>CHECKOUT NOW</Button> */}
           </Summary>
         </Bottom>
       </Wrapper>

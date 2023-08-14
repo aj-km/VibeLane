@@ -5,9 +5,14 @@ import styled from 'styled-components';
 import {mobile} from "../responsive";
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+// import { Link } from '@emotion/react';
 
 const Container = styled.div`
     height: 60px;
+    color:white;
+    background: linear-gradient(to right, #ff0084, #33001b);
+    // background: linear-gradient(to right, #b3ffab, #12fff7);
+    // background: linear-gradient(to right, #acb6e5, #86fde8);
     ${mobile({ height:"50px"})}
 `
 
@@ -31,7 +36,7 @@ const Language = styled.span`
 `;
 
 const SearchContainer = styled.div`
-  border: 0.5px solid lightgray;
+  // border: 0.5px solid lightgray;
   display: flex;
   align-items: center;
   margin-left: 25px;   
@@ -46,15 +51,19 @@ const Input = styled.input`
 const Center = styled.div`
   flex: 1;
   text-align: center;
-`;
-
-const Logo = styled.h1`
+  text-decoration: none;
+  `;
+  
+  const Logo = styled.h1`
   font-weight: bold;
+  color: white;
+  text-decoration: none;
   ${mobile({ fontSize:"24px" } )}
 `;
 const Right = styled.div`
   flex: 1;
   display: flex;
+  color: white;
   align-items: center;
   justify-content: flex-end;
   ${mobile({ flex:2, justifyContent: "center" } )}
@@ -62,6 +71,7 @@ const Right = styled.div`
 
 const MenuItem = styled.div`
   font-size: 14px;
+  color: white;
   cursor: pointer;
   margin-left: 25px;
   ${mobile({ fontSize:"12px", marginLeft:"10px" } )}
@@ -82,21 +92,13 @@ const Navbar = () => {
                 </SearchContainer>
             </Left>
             <Center>
-              <Link to="/" className="link" >
-              <Logo>E-Mart</Logo>
-              </Link>
+              <Link to="/" style={{ textDecoration : "none"}}>  <Logo>VIBELane</Logo>  </Link>
               </Center>   
             <Right>
-              <Link to="/register" className="link">
-                <MenuItem>REGISTER</MenuItem>
-              </Link>
-              <Link to="/login" className="link">
-                <MenuItem>SIGN IN</MenuItem>
-              </Link>  
-              <Link to="/logout" className="link">
-                <MenuItem>LOGOUT</MenuItem>
-              </Link>
-              <Link to="/cart" className="link">
+              <Link to="/register" style={{ textDecoration : "none"}} >  <MenuItem>REGISTER</MenuItem> </Link>
+              <Link to="/login" style={{ textDecoration : "none"}}> <MenuItem>SIGN IN</MenuItem> </Link>  
+              <Link to="/logout" style={{ textDecoration : "none"}} > <MenuItem>LOGOUT</MenuItem></Link>
+              <Link to="/cart" style={{ textDecoration : "none"}}>
                 <MenuItem>
                 <Badge overlap='rectangular' badgeContent={quantity} color="primary">
                     <ShoppingCartOutlined />

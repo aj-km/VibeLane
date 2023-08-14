@@ -4,9 +4,8 @@ import { mobile } from '../responsive';
 
 const Container=styled.div`
     height:60vh;
-    ${'' /* background-color:blue; */}
-    background: rgb(223,187,187);
-    background: linear-gradient(90deg, rgba(223,187,187,1) 0%, rgba(233,230,209,1) 52%, rgba(226,177,162,1) 95%);
+    ${''}
+    background: linear-gradient(to right, #8e9eab, #eef2f3);
     display:flex;
     align-items: center;
     justify-content: center;
